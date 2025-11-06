@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .secondary{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 5px;
+            padding: 10px;
+        }
+        h1{
+            margin: 10px ;
+        }
+        .radio{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .checkbox{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        input{
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Personal Details</h1>
+        <form action="">
+            
+            <fieldset>
+            <div class="secondary">
+                <label for="name">Name: </label>
+                <input type="text" required placeholder="Ex: Sam"> 
+<br>
+
+                <label for="email">Email: </label>
+                <input type="email" required placeholder="xyz@gmail.com">
+<br>
+                
+                <label for="Gender">Gender: </label>
+                <div class="radio">
+                    <input type="radio" required value="Male" name="Gender">Male
+                    <input type="radio" required value="Female" name="Gender">Female
+                </div>
+<br>
+
+                <label for="interest">Interest:</label>
+                <div class="checkbox">
+                    <input type="checkbox" value="Games" name="interest">Games
+                    <input type="checkbox" value="Reading" name="interest">Reading
+                </div>
+<br>
+
+                <label for="number">Number: </label>
+                <input type="number" required placeholder="9265837455">
+<br>
+
+                <label for="password">Password: </label>
+                <input type="password" required placeholder="xxxxx" minlength="4">
+
+                <button>Submit</button>
+            </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
