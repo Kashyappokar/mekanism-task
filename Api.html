@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .body-container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1{
+            margin: 10px;
+            font-size: 3rem;
+        }
+
+        label{
+            font-size: large;
+        }
+
+        input{
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+
+        button{
+            margin: 10px;
+            height: 25px;
+            width: 100px;
+        }
+
+        #display{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 5px;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="body-container">
+        <h1>Weather App</h1>
+        <label for="location-selector">Please enter a location:</label> <br>
+        <input type="text" id="location-selector">
+
+        <button onclick="ShowData()">Submit</button>
+        <p id="display" class="display"></p>
+        <p id="display" class="display2"></p>
+        <p id="display" class="display3"></p>
+        <p id="display" class="display4"></p>
+    </div>
+</body>
+<script>
+    
+    function ShowData(){        
+        const location = document.getElementById("location-selector").value
+        const api = `http://api.weatherapi.com/v1/current.json?key=43ce914d14f941c694760356250611&q=${location}&aqi=no`
+        const ApiData = fetch(api).then(res => res.json()).then(data => {
+            const locationName = data.location.name;
+            const tempInC = data.current.temp_c;
+            const tempInF = data.current.temp_f;
+            const windKmph = data.current.wind_kph;
+
+            document.querySelector(".display").textContent = `Location Name: ${locationName}`;
+            document.querySelector(".display2").textContent = `Temperature in C: ${tempInC}`;
+            document.querySelector(".display3").textContent = `Temperature in F: ${tempInF}`;
+            document.querySelector(".display4").textContent =   `wind speed: ${windKmph}`;
+
+        })
+        .catch(error => {
+            console.log(error)
+        })
+}
+
+</script>
+</html>

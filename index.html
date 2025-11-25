@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading{
+            margin: 10px;
+        }
+
+        #movie-selector{
+            width: 100px;
+        }
+
+        #movie-container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .movie{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            background-color: green;
+            padding: 10px;
+        }
+        .movie>h1{
+            background: black;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .movie>h6{
+            background: orange;
+            font-size: x-large;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="heading">
+            <h1>Book My Show</h1>
+        </div>
+        <select id="movie-selector" onchange="displayMovies()">
+            <option value="none">none</option>
+            <option value="action">Action</option>
+            <option value="romance">romance</option>
+            <option value="romcom">romcom</option>
+        </select>
+    </div>
+    <div id="movie-container">
+        <div class="movie" category-data="action">
+                <h1>Action-1</h1>
+                <h6>Rs.100</h6>
+            
+        </div>
+        <div class="movie" category-data="action">
+            
+                <h1>Action-2</h1>
+                <h6>Rs.150</h6>
+            
+        </div>
+        <div class="movie" category-data="action">
+            
+                <h1>Action-3</h1>
+                <h6>Rs.200</h6>
+            
+        </div>
+        <div class="movie" category-data="action">
+            
+                <h1>Action-4</h1>
+                <h6>Rs.250</h6>
+            
+        </div>
+        <div class="movie" category-data="romance">
+            
+                <h1>Romance-1</h1>
+                <h6>Rs.100</h6>
+            
+        </div>
+        <div class="movie" category-data="romance">
+            
+                <h1>Romance-2</h1>
+                <h6>Rs.200</h6>
+            
+        </div>
+        <div class="movie" category-data="romance">
+            
+                <h1>Romance-3</h1>
+                <h6>Rs.300</h6>
+            
+        </div>
+        <div class="movie" category-data="romcom">
+            
+                <h1>RomCom-1</h1>
+                <h6>Rs.100</h6>
+            
+        </div>
+        <div class="movie" category-data="romcom">
+            
+                <h1>RomCom-2</h1>
+                <h6>Rs.150</h6>
+            
+        </div>
+    </div>
+</body>
+<script>
+    function displayMovies() {
+        const selected = document.getElementById("movie-selector").value
+        const movies = document.querySelectorAll(".movie")
+        
+        movies.forEach( movie => {
+            const category = movie.getAttribute("category-data")
+
+            if(selected === "none" || category === selected){
+                movie.style.display = "block"
+            }
+            else{
+                movie.style.display = "none"
+            }
+        })
+    }
+</script>
+</html>

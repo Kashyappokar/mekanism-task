@@ -1,0 +1,56 @@
+.mainSection{
+    /* margin: 40px; */
+    border: 2px solid white;
+    padding: 30px;
+    margin: 30px;
+    height: 300px;
+    width: 300px;
+}
+
+.TopSection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+}
+
+.TitleBox{
+    width: 50%;
+    border: 2px solid white;
+    height: 20px;
+    padding: 10px;
+    background: #3b3b3b;
+    position: relative;
+}
+
+.buttonArea{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    height: 20px;
+    padding: 10px 3px;
+}
+
+.editButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #3b3b3b;
+}
+
+.DeleteButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #3b3b3b;
+}
+
+.DisplaySection{
+    border: 2px solid white;
+    height: 60%;
+    background: #3b3b3b;
+    padding: 10px;
+}

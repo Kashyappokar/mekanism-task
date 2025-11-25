@@ -1,0 +1,98 @@
+.PopUpMain{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    width: 500px;
+    inset-inline-start: 32%;
+    inset-block-start: 15%;
+    background-color: #242424;
+    opacity: 100%;
+    box-shadow: 0px 2px 100px 1300px rgba(255, 255, 255, 0.474);
+    visibility: visible;
+    border-radius: 16px;
+    z-index: 1;
+    gap: 10px;
+    padding: 30px;
+}
+
+.openPopUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    width: 500px;
+    inset-inline-start: 32%;
+    inset-block-start: 15%;
+    background-color: #242424;
+    opacity: 100%;
+    box-shadow: 0px 2px 100px 1300px rgba(255, 255, 255, 0.474);
+    visibility: visible;
+    border-radius: 16px;
+    z-index: 1;
+    gap: 10px;
+    padding: 30px;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.titleBar{
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+}
+
+.titleBar::placeholder{
+    text-align: center;
+}
+
+input::placeholder{
+    color: gray;
+    font-weight: 600;
+}
+
+.descBox{
+    height: 280px;
+    width: 300px;
+    padding: 10px;
+    font-size: large;
+}
+
+.descBox::placeholder{
+    text-align: center;
+}
+
+.AddNote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3b3b3b;
+    width: 100px;
+    height: 55px;
+}
+
+.AddNote:hover{
+    background: #242424;
+}
+
+.AddNote:focus{
+    outline: none;
+}
+
+.cancelButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3b3b3b;
+    width: 35px;
+    height: 33px;
+    position: relative;
+    top: -460px;
+    left: 245px;
+}
