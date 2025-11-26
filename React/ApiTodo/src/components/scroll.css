@@ -1,0 +1,12 @@
+#category-list {
+    scrollbar-width: none;
+    padding: 0;
+    max-height: 180px;
+    height: auto;
+}
+#todo-list {
+    scrollbar-width: none;
+    padding: 0;
+    max-height: 400px;
+    height: auto;
+}

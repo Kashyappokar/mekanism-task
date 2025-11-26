@@ -47,7 +47,6 @@ const PopUp = ({
     setEditIndex(null)
     setValue("")
     setIsOpen(false)
-    value = ""
   };
 
   return (
